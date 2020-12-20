@@ -130,9 +130,6 @@
   .d-xs-none {
     display: none;
   }
-  .pd-0 {
-    padding: 0;
-  }
   .col-xs {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -175,6 +172,9 @@
   .col-75 {
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .pd-0 {
+    padding: 0;
   }
 }
 
