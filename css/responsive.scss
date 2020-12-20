@@ -1,0 +1,110 @@
+@media (max-width: 991px) {
+  #content .story-list__item-detail {
+    .info-story {
+      max-width: 75%;
+    }
+    .info-updated-story {
+      max-width: 25%;
+      flex-direction: column;
+      align-items: flex-end;
+      .last-chapter-story {
+        margin-right: unset;
+        margin-bottom: 5px;
+        text-align: right;
+      }
+      .total-chapter-story,
+      .total-like-story {
+        margin-right: unset;
+      }
+      .total-like-story {
+        min-width: unset;
+        margin: 5px 0;
+      }
+      .total-view-story {
+        min-width: unset;
+        text-align: right;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    padding: 8px 0;
+    .header-logo a img {
+      width: 75px;
+    }
+  }
+  footer {
+    padding: 20px 0;
+  }
+  .modal {
+    width: 80%;
+  }
+}
+@media (max-width: 420px) {
+  #content .story-list__item-detail .info-story {
+    .name-status-story .name-story {
+      max-width: 175px;
+    }
+    .story-list__item-total-trending {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .story-numerical-order {
+      font-size: 1.8rem;
+    }
+  }
+  .modal {
+    width: 70%;
+    .login-with-social-network button {
+      width: 130px;
+      &.btn-login-google img {
+        left: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 376px) {
+  .header {
+    .header-logo a img {
+      width: 60px;
+    }
+    .menu-mobile .menu-mobile-content {
+      width: 75%;
+      .user-action button {
+        padding: 8px 14px;
+      }
+    }
+  }
+  .modal {
+    .login-with-social-network button {
+      width: 127px;
+      &.btn-login-google img {
+        left: 28px;
+      }
+    }
+  }
+}
+@media (max-width: 376px) {
+  .header {
+    .menu-mobile .menu-mobile-content {
+      .main-logo a {
+        width: 80px;
+      }
+      .user-action button {
+        padding: 8px;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .modal {
+    top: 40%;
+    .login-with-social-network button {
+      width: 107px;
+      &.btn-login-google img {
+        left: 18px;
+      }
+    }
+  }
+}

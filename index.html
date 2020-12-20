@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./css/font-awesome.css">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body class="light-mode">
 
@@ -19,7 +20,7 @@
               <img src="https://blog.mepuzz.com/wp-content/uploads/2019/12/logo.png" class="header-logo__image" alt="">
             </a>
           </div>
-          <div class="col-50 col-xs-60 header-search">
+          <div class="col-50 col-xs-65 header-search">
             <form action="">
               <input type="text" class="header-search__input" placeholder="Tìm truyện, tác giả...">
               <button type="submit" class="header-search__btn">
@@ -29,14 +30,94 @@
           </div>
           <div class="col-25 d-xs-none header-user">
             <div class="header-user__info">
-              <!-- <img src="https://mepuzz.com/favicon.ico" alt=""> -->
+              <img src="https://mepuzz.com/favicon.ico" alt="">
+              <span class="username">Nguyễn Văn A</span>
               <i class="fa fa-user"></i>
-              <span class="username">Đăng nhập</span>
+              <button type="button" class="btn-login">Đăng nhập</button>
             </div>
             <div class="header-user__action">
               <ul>
-                <button type="button">Đăng nhập</button>
-                <button type="button">Đăng xuất</button>
+                <button type="button" class="btn-change-password">Đổi mật khẩu</button>
+                <button type="button" class="btn-logout">Đăng xuất</button>
+              </ul>
+            </div>
+          </div>
+          <div class="col-25 col-xs-15 d-none menu-mobile">
+            <div id="showMenu" class="btn-show-menu"><i class="fa fa-bars"></i></div>
+            <div id="overLayMenu" class="background-overlay"></div>
+            <div class="menu-mobile-content">
+              <div class="main-logo d-flex align-items-center justify-content-between">
+                <a href=""><img src="https://blog.mepuzz.com/wp-content/uploads/2019/12/logo.png" alt=""></a>
+                <button id="closeMenu" type="button" class="btn-close-menu" title="Close Menu"><i class="fa fa-times"></i></button>
+              </div>
+              <div class="user-action d-flex align-items-center justify-content-between">
+                <button type="button" class="btn-login"><i class="fa fa-user"></i>Đăng nhập</button>
+                <button type="button" class="btn-register"><i class="fa fa-registered"></i>Đăng ký</button>
+              </div>
+              <a href="" class="infomation-user d-flex align-items-center">
+                <img src="https://www.elle.vn/wp-content/uploads/2017/08/05/hinh-anh-dep-khong-qua-photoshop-32.jpg" alt="">
+                <span>Nguyễn Văn A<i class="fa fa-arrow-circle-right"></i></span>
+              </a>
+              <ul id="menuMobileUl">
+                <li class="list-category-mobile">
+                  <span>Thể loại truyện<i class="fa fa-angle-down"></i></span>
+                  <ul class="sub-menu-mobile">
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Truyện yêu thích</a></li>
+                <li><a href="">Top truyện hay</a></li>
+                <li><a href="">Top user đóng góp</a></li>
+                <li><a href="">Truyện VIP</a></li>
+                <li><a href="">Truyện Full</a></li>
+                <li><a href="">Truyện Hot</a></li>
+                <li><button class="btn-change-password"><i class="fa fa-key"></i>Đổi mật khẩu</button></li>
+                <li><button><i class="fa fa-sign-out"></i>Đăng xuất</button></li>
               </ul>
             </div>
           </div>
@@ -229,7 +310,13 @@
               </li> -->
             </ul>
           </div>
+          <div class="list-tag">
+            <a href="" class="tag tag-vip" title="">#Truyện VIP</a>
+            <a href="" class="tag tag-full" title="">#Truyện Full</a>
+            <a href="" class="tag tag-hot" title="">#Truyện Hot</a>
+          </div>
         </div>
+
         <div class="col-75 col-xs main-content">
           <div class="box-content new-story-updated">
             <h3><a href="">Truyện mới cập nhật<i class="fa fa-feed"></i></a></h3>
@@ -495,64 +582,746 @@
                 </div>
               </li>
               <li class="story-list__item see-more">
-                <a href="" title="">Xem thêm...</a>
+                <a href="" title="">Xem thêm</a>
               </li>
             </ul>
           </div>
+
+          <div class="box-content charts-story">
+            <h3>
+              <a href="">Bảng xếp hạng<i class="fa fa-angle-right"></i></a>
+              <div class="charts-story__times">
+                <a href="" class="charts-story__date active" title="">Ngày</a>
+                <a href="" class="charts-story__week" title="">Tuần</a>
+                <a href="" class="charts-story__month" title="">Tháng</a>
+              </div>
+            </h3>
+            <ul class="story-list">
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">01</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>4851</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">02</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">03</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">04</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">05</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">06</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">07</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">08</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">09</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <span class="story-numerical-order">10</span>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item see-more">
+                <a href="" title="">Xem thêm</a>
+              </li>
+            </ul>
+          </div>
+
           <div class="box-content nominated-story">
             <h3>Truyện đề cử</h3>
             <ul class="story-list">
               <li class="story-list__item">
                 <div class="story-list__item-detail">
-                  <a href="" class="name-story" title=""><i class="fa fa-book"></i>Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="info-updated-story">
-                    <span class="last-chapter-story">Chương 117</span>
-                    <span class="updated-time-story">49 phút trước</span>
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>61</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
                   </div>
                 </div>
               </li>
               <li class="story-list__item">
                 <div class="story-list__item-detail">
-                  <a href="" class="name-story" title=""><i class="fa fa-book"></i>Quang Minh Giáo Đình Tại Tu Chân Thế Giới</a>
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Long Tế</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="info-updated-story">
-                    <span class="last-chapter-story">Chương 117</span>
-                    <span class="updated-time-story">49 phút trước</span>
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>9651</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>676</span>
                   </div>
                 </div>
               </li>
               <li class="story-list__item">
                 <div class="story-list__item-detail">
-                  <a href="" class="name-story" title=""><i class="fa fa-book"></i>Ta Với Sư Môn Không Hợp</a>
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Quang Minh Giáo Đình Tại Tu Chân Thế Giới</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="info-updated-story">
-                    <span class="last-chapter-story">Chương 117</span>
-                    <span class="updated-time-story">49 phút trước</span>
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,796</span>
                   </div>
                 </div>
               </li>
               <li class="story-list__item">
                 <div class="story-list__item-detail">
-                  <a href="" class="name-story" title=""><i class="fa fa-book"></i>Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Ta Với Sư Môn Không Hợp</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="info-updated-story">
-                    <span class="last-chapter-story">Chương 117</span>
-                    <span class="updated-time-story">49 phút trước</span>
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>96</span>
                   </div>
                 </div>
               </li>
               <li class="story-list__item">
                 <div class="story-list__item-detail">
-                  <a href="" class="name-story" title=""><i class="fa fa-book"></i>Y Võ Song Toàn</a>
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
                   <div class="info-updated-story">
-                    <span class="last-chapter-story">Chương 117</span>
-                    <span class="updated-time-story">49 phút trước</span>
+                    <span class="total-chapter-story">6,467 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>797,796</span>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
+
+          <div class="box-content nominated-story">
+            <h3><a href="">Truyện Full<i class="fa fa-angle-right"></i></a></h3>
+            <ul class="story-list">
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>61</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Long Tế</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>9651</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>676</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Quang Minh Giáo Đình Tại Tu Chân Thế Giới</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Ta Với Sư Môn Không Hợp</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>96</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">6,467 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Nhược Tuyết Tam Thiên"><i class="fa fa-user"></i>Nhược Tuyết Tam Thiên</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>61</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Long Tế</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>9651</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>676</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Quang Minh Giáo Đình Tại Tu Chân Thế Giới</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>67,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Ta Với Sư Môn Không Hợp</a>
+                        <div class="status-story">
+                          <span class="is-vip active">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Phong Lăng Thiên Hạ"><i class="fa fa-user"></i>Phong Lăng Thiên Hạ</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">117 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>96</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item">
+                <div class="story-list__item-detail">
+                  <div class="info-story">
+                    <i class="fa fa-book"></i>
+                    <div class="story-list__item-info">
+                      <div class="name-status-story">
+                        <a href="" class="name-story" title="">Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                        <div class="status-story">
+                          <span class="is-vip">vip</span>
+                          <span class="is-full active">full</span>
+                          <span class="is-hot active">hot</span>
+                        </div>
+                      </div>
+                      <div class="story-list__item-total-trending">
+                        <a href class="author-story" title="Tiêu Đỉnh"><i class="fa fa-user"></i>Tiêu Đỉnh</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-updated-story">
+                    <span class="total-chapter-story">6,467 chương</span>
+                    <span class="total-like-story" title="961 lượt thích"><i class="fa fa-heart"></i>961</span>
+                    <span class="total-view-story" title="67,797,796 lượt đọc"><i class="fa fa-eye"></i>797,796</span>
+                  </div>
+                </div>
+              </li>
+              <li class="story-list__item see-more">
+                <a href="" title="">Xem thêm</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <div class="copy-right">&copy;copyright 2020</div>
+      <div class="contact-us">Contact Us: <a href="mailto:hotro@mepuzz.com" title="hotro@mepuzz.com">hotro@mepuzz.com</a></div>
+    </div>
+  </footer>
+
+  <div id="overLayModal" class="background-overlay background-overlay-modal"></div>
+
+  <div id="modalLogin" class="modal modal-login">
+    <button id="btnCloseModalLogin" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account">
+      <h3>Đăng nhập</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Mật khẩu">
+        <button type="submit" class="btn-action-login">Đăng nhập</button>
+      </form>
+      <button type="button" class="btn-forgot-password">Quên mật khẩu?</button>
+    </div>
+    <div class="login-with-social-network">
+      <h3>Đăng nhập bằng</h3>
+      <button type="button" class="btn-login-facebook"><i class="fa fa-facebook-square"></i><span>Facebook</span></button>
+      <button type="button" class="btn-login-google"><img src="./images/google.png"><span>Google</span></button>
+    </div>
+    <div class="register">
+      <span>Chưa có tài khoản?</span>
+      <button type="button" class="btn-register">Đăng ký</button>
+    </div>
+  </div>
+
+  <div id="modalRegister" class="modal modal-register">
+    <button id="btnCloseModalRegister" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account border-none">
+      <h3>Đăng ký</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Mật khẩu">
+        <input type="password" name="repeat_password" placeholder="Nhập lại mật khẩu">
+        <button type="submit" class="btn-action-register">Đăng ký</button>
+      </form>      
+      <div class="register mg-top-5">
+        <span>Đã tài khoản?</span>
+        <button type="button" class="btn-login">Đăng nhập</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalForgotPassword" class="modal modal-forgot-password">
+    <button id="btnCloseModalForgotPassword" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account box-content-forgot-password border-none active">
+      <h3>Quên mật khẩu</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Nhập email của bạn">
+        <button type="button" class="btn-action-get-password">Lấy mật khẩu mới</button>
+      </form>      
+      <div class="register mg-top-5">
+        <span>Đã tài khoản?</span>
+        <button type="button" class="btn-login">Đăng nhập</button>
+      </div>
+    </div>
+    <div class="notification-forgot-password">
+      <div class="title-notif">Thông báo</div>
+      <div>Một mật khẩu mới đã được gửi đến email "<span>abc@gmail.com</span>".</div>
+      <div>Vui lòng kiểm tra email của bạn để lấy mật khẩu.</div>
+    </div>
+  </div>
+
+  <div id="modalChangePassword" class="modal modal-change-password">
+    <button id="btnCloseModalChangePassword" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account box-content-change-password border-none active">
+      <h3>Đổi mật khẩu</h3>
+      <form action="">
+        <input type="password" name="old_password" placeholder="Mật khẩu cũ">
+        <input type="password" name="new_password" placeholder="Mật khẩu mới">
+        <input type="password" name="repeat_new_password" placeholder="Nhập lại mật khẩu mới">
+        <button type="button" class="btn-action-change-password">Đổi mật khẩu</button>
+      </form>      
+    </div>
+    <div class="notification-change-password text-center">Đổi mật khẩu thành công</div>
+  </div>
+
+  <div id="theme-mode"><img src="./images/sun.png" alt="light-mode" title="Chuyển sang chế độ tối"></div>
+  <div id="back-to-top"><i class="fa fa-angle-up"></i></div>
 
   <script src="./js/script.js"></script>
 </body>
