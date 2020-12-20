@@ -1,5 +1,5 @@
 @media (max-width: 991px) {
-  #content .story-list__item-detail {
+  .story-list__item-detail {
     .info-story {
       max-width: 75%;
     }
@@ -34,6 +34,16 @@
       width: 75px;
     }
   }
+  .breadcrumb {
+    margin-bottom: 15px;
+    padding: unset;
+  }
+  .chapter {
+    border-radius: unset;
+    .content-chapter {
+      margin-top: unset;
+    }
+  }
   footer {
     padding: 20px 0;
   }
@@ -42,7 +52,7 @@
   }
 }
 @media (max-width: 420px) {
-  #content .story-list__item-detail .info-story {
+  .story-list__item-detail .info-story {
     .name-status-story .name-story {
       max-width: 175px;
     }
