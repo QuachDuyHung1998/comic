@@ -38,6 +38,16 @@
     margin-bottom: 15px;
     padding: unset;
   }
+  .story .content-story .detail-story {
+    flex-direction: column;
+    .information-story,
+    .description-story {
+      width: 100%;
+    }
+    .information-story {
+      margin: 0 0 15px;
+    }
+  }
   .chapter {
     border-radius: unset;
     .content-chapter {
@@ -64,6 +74,12 @@
       font-size: 1.8rem;
     }
   }
+  .story .content-story .title-story {
+    padding: 15px;
+    .action-story a {
+      width: 154px;
+    }
+  }
   .modal {
     width: 70%;
     .login-with-social-network button {
@@ -73,6 +89,9 @@
       }
     }
   }
+  #settings {
+    right: 10px;
+  }
 }
 @media (max-width: 376px) {
   .header {
@@ -81,9 +100,19 @@
     }
     .menu-mobile .menu-mobile-content {
       width: 75%;
-      .user-action button {
-        padding: 8px 14px;
+      .main-logo a {
+        width: 80px;
       }
+      .user-action button {
+        padding: 8px;
+      }
+    }
+  }
+  .story .content-story .title-story {
+    padding: 15px 10px;
+    .action-story a {
+      margin: unset;
+      width: 149px;
     }
   }
   .modal {
@@ -95,19 +124,11 @@
     }
   }
 }
-@media (max-width: 376px) {
-  .header {
-    .menu-mobile .menu-mobile-content {
-      .main-logo a {
-        width: 80px;
-      }
-      .user-action button {
-        padding: 8px;
-      }
-    }
-  }
-}
 @media (max-width: 320px) {
+  .pagination-chapter ul li:first-child,
+  .pagination-chapter ul li:last-child {
+    width: 110px;
+  }
   .modal {
     top: 40%;
     .login-with-social-network button {

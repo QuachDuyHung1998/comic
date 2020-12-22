@@ -125,6 +125,32 @@ a:hover {
       }
     }
   }
+  .story {
+    .content-story {
+      .title-story {
+        color: $color_light;
+        background-color: $background_input_light;
+      }
+      .detail-story {
+        .information-story {
+          color: $color_light;
+          background-color: $background_input_light;
+        }
+        .description-story {
+          color: $color_light;
+          background-color: $background_input_light;
+          .see-more-des {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+          }
+        }
+      }
+    }
+  }
+  .list-chapter {
+    > ul > li {
+      border-bottom: 1px dashed $border_color_light;
+    }
+  }
   .chapter {
     .title-chapter {
       background-color: $background_input_light;
@@ -137,12 +163,59 @@ a:hover {
       }
     }
   }
+  .comment-story {
+    h3 {
+      color: $color_light;
+      border-bottom: 1px solid $border_color_light;
+      &:before {
+        background-color: $background_box_dark;
+      }
+    }
+    .form-comment {
+      input,
+      textarea {
+        color: $color_light;
+        background-color: $background_box_light;
+        border: 1px solid $border_color_light;
+        &::placeholder {
+          color: $color_input_light;
+        }
+        &:focus {
+          box-shadow: 0 2px 5px 1px $border_color_light;
+        }
+      }
+    }
+    .list-comment {
+      background-color: $background_box_light;
+      box-shadow: 0 1px 2px 0px $box_shadow_light;
+      &__item {
+        .detail-comment {
+          .box-content {
+            background-color: $background_input_light;
+          }
+        }
+        .box-replying {
+          &__form {
+            input {
+              border: 1px solid $border_color_light;
+            }
+          }
+        }
+      }
+    }
+  }
   footer {
     color: $color_light;
     background-color: $background_box_light;
   }
+  #settings,
   #back-to-top {
     background-color: $background_btn_action_light;
+  }
+  #settings {
+    .list-config {
+      box-shadow: 0 1px 2px 2px $box_shadow_light;
+    }
   }
 }
 
@@ -258,6 +331,32 @@ a:hover {
       }
     }
   }
+  .story {
+    .content-story {
+      .title-story {
+        color: $color_dark;
+        background-color: $background_input_dark;
+      }
+      .detail-story {
+        .information-story {
+          color: $color_dark;
+          background-color: $background_input_dark;
+        }
+        .description-story {
+          color: $color_dark;
+          background-color: $background_input_dark;
+          .see-more-des {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+          }
+        }
+      }
+    }
+  }
+  .list-chapter {
+    > ul > li {
+      border-bottom: 1px dashed $border_color_dark;
+    }
+  }
   .chapter {
     .title-chapter {
       background-color: $background_input_dark;
@@ -270,12 +369,60 @@ a:hover {
       }
     }
   }
+  .comment-story {
+    h3 {
+      color: $color_dark;
+      border-bottom: 1px solid $border_color_dark;
+      &:before {
+        background-color: $color_dark;
+      }
+    }
+    .form-comment {
+      input,
+      textarea {
+        color: $color_dark;
+        background-color: $background_box_dark;
+        border: 1px solid $border_color_dark;
+        &::placeholder {
+          color: $color_input_dark;
+        }
+        &:focus {
+          box-shadow: 0 2px 5px 1px $border_color_dark;
+        }
+      }
+    }
+    .list-comment {
+      background-color: $background_box_dark;
+      box-shadow: 0 1px 2px 0px $box_shadow_dark;
+      &__item {
+        .detail-comment {
+          .box-content {
+            background-color: $background_input_dark;
+          }
+        }
+        .box-replying {
+          &__form {
+            input {
+              background-color: $background_input_dark;
+              border: 1px solid $border_color_dark;
+            }
+          }
+        }
+      }
+    }
+  }
   footer {
     color: $color_dark;
     background-color: $background_box_dark;
   }
+  #settings,
   #back-to-top {
     background-color: $background_btn_action_dark;
+  }
+  #settings {
+    .list-config {
+      box-shadow: 0 1px 2px 2px $box_shadow_dark;
+    }
   }
 }
 
@@ -677,7 +824,7 @@ a:hover {
         }
         a {
           display: inline-block;
-          padding: 6px 15px 6px 35px;
+          padding: 6px 8px 6px 32px;
           line-height: 1.3;
           text-transform: capitalize;
         }
@@ -817,6 +964,148 @@ a:hover {
   }
 }
 
+.story {
+  .content-story {
+    padding: 15px;
+    .title-story {
+      margin-bottom: 15px;
+      padding: 20px;
+      color: $color_light;
+      border: 1px dashed #acacac;
+      border-radius: 5px;
+      h1 {
+        font-family: $fonts_bold;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+      }
+      .rating {
+        margin-bottom: 8px;
+        .star-rating {
+          margin-bottom: inherit;
+        }
+        .detail-rating {
+          font-size: 1.2rem;
+        }
+      }
+      .total-like,
+      .total-view {
+        margin: 0 8px;
+        font-size: 1.2rem;
+        i {
+          margin-right: 3px;
+        }
+      }
+      .action-story {
+        margin-top: 8px;
+        a {
+          margin: 0 5px;
+          width: 160px;
+          height: 35px;
+          line-height: 35px;
+          color: $color_btn;
+          background-color: $background_btn;
+          border-radius: 3px;
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+      .reading-chapter {
+        margin-top: 15px;
+        .name-chapter {
+          margin-bottom: 8px;
+          text-transform: capitalize;
+        }
+        a {
+          display: inline-block;
+          padding: 10px 15px;
+          color: $color_btn;
+          background-color: $background_btn;
+          border-radius: 3px;
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    .detail-story {
+      .information-story {
+        margin-right: 15px;
+        padding: 10px;
+        width: 30%;
+        line-height: 1.8;
+        border: 1px dashed #acacac;
+        border-radius: 5px;
+        box-sizing: border-box;
+        a {
+          font-family: $fonts_bold;
+          // text-decoration: underline;
+        }
+        .update-time i {
+          margin-right: 5px;
+        }
+      }
+      .description-story {
+        position: relative;
+        width: calc(70% - 15px);
+        padding: 10px 10px 50px;
+        height: 300px;
+        overflow: hidden;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        border: 1px dashed #acacac;
+        border-radius: 5px;
+        box-sizing: border-box;
+        &.active {
+          height: unset;
+        }
+        .see-more-des {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 40px;
+          line-height: 45px;
+          font-family: $fonts_bold;
+          font-size: 1.2rem;
+          text-align: center;
+          font-style: italic;
+          text-decoration: underline;
+          background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+          border-radius: 0 0 5px 5px;
+          cursor: pointer;
+          z-index: 1;
+        }
+        h4 {
+          margin-bottom: 10px;
+          font-family: $fonts_bold;
+          font-size: 1.8rem;
+        }
+        a {
+          font-family: $fonts_bold;
+        }
+      }
+    }
+  }
+}
+
+.list-chapter {
+  h3 i {
+    margin-right: 8px;
+  }
+  > ul > li {
+    &:last-child {
+      border: none;
+    }
+    > a {
+      display: block;
+      padding: 8px 15px;
+      text-transform: capitalize;
+    }
+  }
+}
+
 .chapter {
   padding: 15px;
   line-height: 1.3;
@@ -841,13 +1130,14 @@ a:hover {
   .content-chapter {
     margin-top: 15px;
     font-size: 2rem;
-    line-height: 1.3;
+    line-height: 1.4;
   }
 }
 
 .breadcrumb {
   margin-bottom: 5px;
-  padding: 8px 0 10px;
+  padding: 5px 0 8px;
+  line-height: 1.5;
   &-chapter {
     padding: 8px 0 13px;
   }
@@ -913,6 +1203,180 @@ a:hover {
   }
 }
 
+.comment-story {
+  margin: 30px 0;
+  h3 {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    font-family: $fonts_bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #333;
+    border-bottom: 1px solid $border_color_light;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 25%;
+      height: 1.5px;
+      background-color: $background_box_dark;
+      z-index: 1;
+    }
+  }
+  .form-comment {
+    margin-bottom: 20px;
+    input,
+    textarea {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: $color_light;
+      background-color: $background_box_light;
+      border: 1px solid $border_color_light;
+      border-radius: 5px;
+      transition: all 0.15s ease-in-out;
+      &::placeholder {
+        color: $color_input_light;
+      }
+      &:focus {
+        box-shadow: 2px 2px 5px 1px #ddd;
+      }
+    }
+    input {
+      width: 100%;
+      height: 35px;
+    }
+    textarea {
+      width: 100%;
+      padding: 12px;
+    }
+    button {
+      padding: 10px 20px;
+      color: $color_btn;
+      background-color: $background_btn;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      i {
+        margin-left: 8px;
+      }
+    }
+  }
+  .list-comment {
+    padding: 15px;
+    background-color: $background_box_light;
+    box-shadow: 0 1px 2px 0px $box_shadow_light;
+    border-radius: 5px;
+    .btn-see-more-comment {
+      margin-bottom: 20px;
+      font-family: $fonts_bold;
+      font-size: 1.3rem;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .total-comment {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    &__item {
+      .list-comment__main,
+      .list-comment__reply-item {
+        margin-bottom: 15px;
+      }
+      .list-comment__reply {
+        margin-left: 45px;
+      }
+      .is_admin .box-content__user-name {
+        padding: 3px 8px;
+        color: $color_btn;
+        background-color: $background_btn;
+        border-radius: 5px;
+      }
+      .avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .detail-comment {
+        margin-left: 8px;
+        .box-content {
+          display: inline-block;
+          margin: unset;
+          padding: 10px 12px 8px;
+          background-color: $background_input_light;
+          border-radius: 12px;
+          &__user-name {
+            display: inline-block;
+            font-family: $fonts_bold;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+          }
+          &__content {
+            line-height: 1.3;
+          }
+        }
+        .action {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          margin: 8px 0 0 12px;
+          &__show-reply {
+            position: relative;
+            font-weight: 600;
+            margin-right: 15px;
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+            &:before {
+              position: absolute;
+              content: ".";
+              top: 2px;
+              right: -10px;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+      .box-replying {
+        display: none;
+        margin-bottom: 15px;
+        order: 1000;
+        &__form {
+          width: 100%;
+          margin-left: 8px;
+          input {
+            margin-bottom: 5px;
+            width: 100%;
+            height: 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+          }
+          .send-reply {
+            padding: 8px 15px;
+            color: $color_btn;
+            background-color: $background_btn;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}
+
 footer {
   margin-top: 20px;
   padding: 30px 0;
@@ -943,6 +1407,9 @@ footer {
   &.active {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+  &.modal-list-chapter {
+    top: 45%;
   }
   .btn-close-modal {
     position: absolute;
@@ -996,6 +1463,23 @@ footer {
       margin-bottom: 15px;
       font-size: 1.2rem;
       text-decoration: underline;
+    }
+    .list-chapter {
+      > ul > li {
+        border-left: 1px solid $border_color_light;
+        border-right: 1px solid $border_color_light;
+        border-bottom: 1px solid $border_color_light;
+        &:first-child {
+          border-top: 1px solid $border_color_light;
+          border-radius: 3px 3px 0 0;
+        }
+        &:nth-child(10) {
+          border-radius: 0 0 3px 3px;
+        }
+        &:last-child {
+          border: none;
+        }
+      }
     }
   }
   .login-with-social-network {
@@ -1071,6 +1555,81 @@ footer {
     }
     div span {
       text-decoration: underline;
+    }
+  }
+}
+
+#settings {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  line-height: 40px;
+  text-align: center;
+  color: #ddd;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .list-config {
+    position: absolute;
+    bottom: -75px;
+    right: -23px;
+    padding: 15px;
+    width: 150px;
+    font-size: 1.4rem;
+    color: $color_light;
+    background-color: #fff;
+    border-radius: 3px;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+    &.active {
+      bottom: 0;
+      right: 110%;
+      opacity: 1;
+      transform: scale(1);
+    }
+    ul li {
+      text-align: left;
+      line-height: 1.5;
+      font-size: 1.3rem;
+      div {
+        font-family: $fonts_bold;
+        span {
+          font-family: $fonts;
+        }
+      }
+      #change-text-color,
+      #change-font-size-text {
+        width: 100%;
+        height: 10px;
+        -webkit-appearance: none;
+        background-color: #111;
+        outline: none;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #00fd0a;
+          border: 8px solid #09e410;
+          box-shadow: -407px 0 0 400px #00fd0a;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

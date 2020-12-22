@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/font-awesome.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body class="light-mode">
+
+  <header>
+    <div class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-25 col-xs-20 header-logo">
+            <a href="">
+              <img src="https://blog.mepuzz.com/wp-content/uploads/2019/12/logo.png" class="header-logo__image" alt="">
+            </a>
+          </div>
+          <div class="col-50 col-xs-65 header-search">
+            <form action="">
+              <input type="text" class="header-search__input" placeholder="Tìm truyện, tác giả...">
+              <button type="submit" class="header-search__btn">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="col-25 d-xs-none header-user">
+            <div class="header-user__info">
+              <img src="./images/meme.jpg" alt="">
+              <span class="username">Nguyễn Văn A</span>
+              <i class="fa fa-user"></i>
+              <button type="button" class="btn-login">Đăng nhập</button>
+            </div>
+            <div class="header-user__action">
+              <ul>
+                <button type="button" class="btn-change-password">Đổi mật khẩu</button>
+                <button type="button" class="btn-logout">Đăng xuất</button>
+              </ul>
+            </div>
+          </div>
+          <div class="col-25 col-xs-15 d-none menu-mobile">
+            <div id="showMenu" class="btn-show-menu"><i class="fa fa-bars"></i></div>
+            <div id="overLayMenu" class="background-overlay"></div>
+            <div class="menu-mobile-content">
+              <div class="main-logo d-flex align-items-center justify-content-between">
+                <a href=""><img src="https://blog.mepuzz.com/wp-content/uploads/2019/12/logo.png" alt=""></a>
+                <button id="closeMenu" type="button" class="btn-close-menu" title="Close Menu"><i class="fa fa-times"></i></button>
+              </div>
+              <div class="user-action d-flex align-items-center justify-content-between">
+                <button type="button" class="btn-login"><i class="fa fa-user"></i>Đăng nhập</button>
+                <button type="button" class="btn-register"><i class="fa fa-registered"></i>Đăng ký</button>
+              </div>
+              <a href="" class="infomation-user d-flex align-items-center">
+                <img src="./images/meme.jpg" alt="">
+                <span>Nguyễn Văn A<i class="fa fa-arrow-circle-right"></i></span>
+              </a>
+              <ul id="menuMobileUl">
+                <li class="list-category-mobile">
+                  <span>Thể loại truyện<i class="fa fa-angle-down"></i></span>
+                  <ul class="sub-menu-mobile">
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Tiên hiệp</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Ngôn Tình</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Truyện ma</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Hài Hước</a></li>
+                    <li><a href="" title=""><i class="fa fa-tag"></i>Đam Mỹ</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Truyện yêu thích</a></li>
+                <li><a href="">Top truyện hay</a></li>
+                <li><a href="">Top user đóng góp</a></li>
+                <li><a href="">Truyện VIP</a></li>
+                <li><a href="">Truyện Full</a></li>
+                <li><a href="">Truyện Hot</a></li>
+                <li><button class="btn-change-password"><i class="fa fa-key"></i>Đổi mật khẩu</button></li>
+                <li><button><i class="fa fa-sign-out"></i>Đăng xuất</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="content">
+    <div class="container story">
+      <div class="row">
+        <div class="col-75 col-xs main-content">
+          <div class="breadcrumb">
+            <ul>
+              <li><a href="" title="Trang chủ"><i class="fa fa-home"></i>Trang chủ</a></li>
+              <li><i class="fa fa-angle-right"></i></li>
+              <li>Xuyên Đến Mạt Thế Bảo Vệ Anh</li>
+            </ul>
+          </div>
+          <div class="box-content content-story">
+            <div class="title-story text-center">
+              <h1>XUYÊN ĐẾN MẠT THẾ BẢO VỆ ANH</h1>
+              <div class="rating">
+                <div class="star-rating">
+                  <div class="star-base">
+                      <div class="star-rate" style="width:70%"></div>
+                      <a dt-value="1" href="#1"></a>
+                      <a dt-value="2" href="#2"></a>
+                      <a dt-value="3" href="#3"></a>
+                      <a dt-value="4" href="#4"></a>
+                      <a dt-value="5" href="#5"></a>
+                      <a dt-value="6" href="#6"></a>
+                      <a dt-value="7" href="#7"></a>
+                      <a dt-value="8" href="#8"></a>
+                      <a dt-value="9" href="#9"></a>
+                      <a dt-value="10" href="#10"></a>
+                  </div>
+                </div>
+                <div class="detail-rating">Đánh giá: <b>7</b>/10 từ <b>16 lượt</b></div>
+              </div>
+              <div class="d-inline-flex align-items-center">
+                <div class="total-like"><i class="fa fa-heart"></i>63</div>
+                <div class="total-view"><i class="fa fa-eye"></i>3,461</div>
+              </div>
+              <div class="action-story">
+                <a href="#chapter" class="d-inline-flex align-items-center justify-content-center">
+                  <i class="fa fa-th-list"></i>
+                  <span>Danh sách chương</span>
+                </a>
+                <a href="#" class="d-inline-flex align-items-center justify-content-center">
+                  <i class="fa fa-heart"></i>
+                  <span>Truyện yêu thích</span>
+                </a>
+              </div>
+              <div class="reading-chapter">
+                <div class="name-chapter">Đang đọc: <span>Chương 1 - ngủ nhầm người</span></div>
+                <a href=""><i class="fa fa-file-text-o"></i> Đọc tiếp</a>
+              </div>
+            </div>
+            <div class="detail-story d-flex justify-content-between">
+              <div class="information-story">
+                <div class="author"><b>Tác giả: </b><a href="" title="">Tây Đại Tần</a></div>
+                <div class="category">
+                  <b>Thể loại: </b>
+                  <a href="" title="">Xuyên không</a>,
+                  <a href="" title="">Mạt thế</a>
+                </div>
+                <div class="total-chapter"><b>Số chương: </b>7631</div>
+                <div class="status-story"><b>Trạng thái: </b>Đang cập nhật</div>
+                <div class="update-time"><i class="fa fa-clock-o"></i>08:13:48 - 21/12/2020</div>
+              </div>
+              <div class="description-story">
+                <h4 class="text-center">Mô tả truyện</h4>
+                <div class="desc">
+                  Những năm gần đây, khi mà các thần tượng ngày càng nhiều thì kèm theo đó là các fangirl lại càng đông. Nhưng chắc hẳn chưa có ai là fan trung thành như nữ chính trong bộ truyện <a href="https://webtruyen.com/xuyen-den-mat-the-bao-ve-anh/">Xuyên Đến Mạt Thế Bảo Vệ Anh</a> của tác giả Tây Đại Tần mà các bạn sắp đọc dưới đây. <br><br>Toàn bộ câu chuyện nhẹ nhàng, nhân vật tươi sáng, kể về chuyện một đoàn đội
+                  đoàn kết tin tưởng nhau cùng trở nên mạnh mẽ trong thời mạt thế. Truyện
+                  thể hiện một quan điểm lớn về mặt tình cảm, bởi vì nữ chính toàn tâm
+                  toàn ý, tính cách vô tư đáng yêu khiến nam chính dần dần yêu cô, nhưng
+                  nữ chính hiểu lầm anh có “người trong mộng” nên vẫn luôn trốn tránh, cự
+                  tuyệt. Sau khi cùng nhau vượt qua nhiều <a href="https://webtruyen.com/tinh-day-chong-gai/">tình đầy chông gai,</a> nữ chính cuối cùng
+                  cũng nhận ra tình cảm của anh, bí mật cô là fan xuyên qua cũng từ từ
+                  được hé mở.<br><br>Giới thiệu nội dung:<br><br>Lâm Đàm Đàm là fan trung thành của đệ
+                  nhất cường giả thời mạt thế - Diệp Tiêu. Sau khi xuyên đến mạt thế ba
+                  trăm năm về trước, nguyện vọng đầu tiên của cô là bảo vệ Diệp Tiêu và
+                  đoàn đội lúc này vẫn còn rất yếu nhược của anh, để anh không phải nhiều
+                  lần mất đi đồng đội, cuối cùng bước trên con đường tự bạo giữa đàn
+                  zombie.<br><br>Đương nhiên, yêu ai yêu cả đường đi, nguyện vọng thứ hai
+                  của cô là có thể bảo vệ phó đội trưởng của Diệp Tiêu, để hai người hữu
+                  tình có thể dũng cảm mở lòng với nhau, nắm tay nhau đến cuối đời, không
+                  phải luyến lưu, tiếc nuối.<br><br>Diệp Tiêu phát hiện mỗi khi mình nói
+                  chuyện với lão Bạch, cô bé cực kỳ mạnh nhưng có hơi kỳ lạ luôn luôn nhìn bọn bọ, cười quái đản.<br><br>Tại sao? Cô ấy đang cười cái gì?<br><br>Rất lâu sau, Diệp Tiêu chặn cô bé ở góc tường, hôn trán cô, thành công biến cô từ một bé con thành một chú gà con sợ hãi, anh khẽ cười: “Ai nói với em anh và lão Bạch là một đôi?”<br><br>Lâm Đàm Đàm: “!!!” Đồng nhân (*) ngu ngốc hại mình rồi!<br><br>(*) Đồng nhân: là truyện được viết dựa trên một tác phẩm có sẵn (mạch
+                  truyện, bối cảnh, nhân vật), nhân vật chính trong truyện đồng nhân có
+                  thể là người <a href="https://webtruyen.com/xuyen-khong/">xuyên không</a> hoặc trùng sinh, thay đổi kết cục của nhân vật
+                  hoặc thay đổi kết cục của tác phẩm.<br><br># Mẹ ơi! CP đáng yêu đến với nhau cũng có một phần công lao của con#<br><br>#Mẹ ơi! Idol của con muốn yêu đương với con, làm sao bây giờ? Sốc quá!#
+                </div> 
+                <div class="see-more-des">Xem thêm</div>
+              </div>
+            </div>
+          </div>
+          <div id="chapter" class="box-content list-chapter list-new-chapter">
+            <h3><i class="fa fa-th-list"></i>5 chương mới nhất</h3>
+            <ul>
+              <li><a href="" title="">Chương 1: ngủ nhầm người</a></li>
+              <li><a href="" title="">Chương 2: đây không phải là mua bán</a></li>
+              <li><a href="" title="">Chương 3: bị ép chia tay</a></li>
+              <li><a href="" title="">Chương 4: đã chịu đựng cái nhà này đủ rồi!</a></li>
+              <li><a href="" title="">Chương 5: vậy mà đã mang thai!</a></li>
+            </ul>
+          </div>
+          <div class="box-content list-chapter">
+            <h3><i class="fa fa-th-list"></i>Danh sách chương</h3>
+            <ul>
+              <li><a href="" title="">Chương 1: ngủ nhầm người</a></li>
+              <li><a href="" title="">Chương 2: đây không phải là mua bán</a></li>
+              <li><a href="" title="">Chương 3: bị ép chia tay</a></li>
+              <li><a href="" title="">Chương 4: đã chịu đựng cái nhà này đủ rồi!</a></li>
+              <li><a href="" title="">Chương 5: vậy mà đã mang thai!</a></li>
+              <li><a href="" title="">Chương 1: ngủ nhầm người</a></li>
+              <li><a href="" title="">Chương 2: đây không phải là mua bán</a></li>
+              <li><a href="" title="">Chương 3: bị ép chia tay</a></li>
+              <li><a href="" title="">Chương 4: đã chịu đựng cái nhà này đủ rồi!</a></li>
+              <li><a href="" title="">Chương 5: vậy mà đã mang thai!</a></li>
+              <li><a href="" title="">Chương 1: ngủ nhầm người</a></li>
+              <li><a href="" title="">Chương 2: đây không phải là mua bán</a></li>
+              <li><a href="" title="">Chương 3: bị ép chia tay</a></li>
+              <li><a href="" title="">Chương 4: đã chịu đựng cái nhà này đủ rồi!</a></li>
+              <li><a href="" title="">Chương 5: vậy mà đã mang thai!</a></li>
+              <li><a href="" title="">Chương 1: ngủ nhầm người</a></li>
+              <li><a href="" title="">Chương 2: đây không phải là mua bán</a></li>
+              <li><a href="" title="">Chương 3: bị ép chia tay</a></li>
+              <li><a href="" title="">Chương 4: đã chịu đựng cái nhà này đủ rồi!</a></li>
+              <li><a href="" title="">Chương 5: vậy mà đã mang thai!</a></li>
+              <li class="pagination">
+                <ul>
+                  <li><a href=""><i class="fa fa-angle-left"></i></a></li>
+                  <li class="active">1</li>
+                  <li><a href="" title="">2</a></li>
+                  <li><a href="" title="">3</a></li>
+                  <li><a href=""><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comment-story">
+            <h3>Bình luận</h3>
+            <div class="form-comment">
+              <input type="text" id="input-name" placeholder="Tên của bạn...">
+              <textarea name="" rows="8" id="input-content" placeholder="Nhập nội dung bình luận tại đây..."></textarea>
+              <button type="button" id="btn-send-comment">Gửi<i class="fa fa-paper-plane"></i></button>
+            </div>
+            <div class="list-comment">
+              <div class="d-flex align-items-center justify-content-between">
+                <button type="button" class="btn-see-more-comment">Xem các bình luận trước...</button>
+                <div class="total-comment"><b>3,692</b> bình luận</div>
+              </div>
+              <div class="list-comment__item">
+                <div class="list-comment__main">
+                  <div class="d-flex">
+                    <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                    <div class="detail-comment">
+                      <div class="box-content">
+                        <div class="box-content__user-name">Gái</div>
+                        <div class="box-content__content">Sản phẩm khá OK</div>
+                      </div>
+                      <div class="action">
+                        <div class="action__show-reply">Trả lời</div>
+                        <div class="send-time">14:48:36 - 21/09/2020</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-comment__reply">
+                  <div class="list-comment__reply-item is_admin">
+                    <div class="d-flex">
+                      <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                      <div class="detail-comment">
+                        <div class="box-content">
+                          <div class="box-content__user-name">Admin</div>
+                          <div class="box-content__content">Cảm ơn bạn đã phản hồi, ý kiến của bạn đã góp phần làm cải thiện chất lượng sản phẩm cũng như dịch vụ chăm sóc khách hàng bên mình.</div>
+                        </div>
+                        <div class="action">
+                          <div class="action__show-reply">Trả lời</div>
+                          <div class="send-time">20:59:09 - 21/09/2020</div>
+                        </div>
+                      </div>
+                    </div>                                    
+                  </div>
+                    <div class="list-comment__reply-item">
+                      <div class="d-flex">
+                        <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                        <div class="detail-comment">
+                          <div class="box-content">
+                            <div class="box-content__user-name">Abc</div>
+                            <div class="box-content__content">Chính xác</div>
+                          </div>
+                          <div class="action">
+                            <div class="action__show-reply">Trả lời</div>
+                            <div class="send-time">23:13:40 - 21/09/2020</div>
+                          </div>
+                        </div>
+                      </div>                                    
+                    </div>
+                    <div class="box-replying">
+                      <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                      <div class="box-replying__form">
+                        <input type="text" placeholder="Viết phản hồi...">
+                        <button type="button" class="send-reply" data-name="">Gửi</button>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="list-comment__item">
+                <div class="list-comment__main">
+                  <div class="d-flex">
+                    <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                    <div class="detail-comment">
+                      <div class="box-content">
+                        <div class="box-content__user-name">Gái</div>
+                        <div class="box-content__content">Tuyệt vời</div>
+                      </div>
+                      <div class="action">
+                        <div class="action__show-reply">Trả lời</div>
+                        <div class="send-time">14:48:36 - 21/09/2020</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-comment__reply">
+                  <div class="box-replying">
+                    <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+                    <div class="box-replying__form">
+                      <input type="text" placeholder="Viết phản hồi...">
+                      <button type="button" class="send-reply">Gửi</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-25 d-xs-none nav-bar">
+          <div class="box-content list-category">
+            <h3>Thể loại truyện</h3>
+            <ul>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+              <li><a href="" title="">Tiên hiệp</a></li>
+              <li><a href="" title="">Ngôn Tình</a></li>
+              <li><a href="" title="">Truyện ma</a></li>
+              <li><a href="" title="">Hài Hước</a></li>
+              <li><a href="" title="">Đam Mỹ</a></li>
+            </ul>
+          </div>
+          <div class="box-content story-wishlish">
+            <h3><a href="">Truyện yêu thích<i class="fa fa-angle-right"></i></a></h3>
+            <ul>
+              <li>
+                <div class="story-numerical-order">01</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Y Võ Song Toàn</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">02</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">03</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Ta Với Sư Môn Không Hợp</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">04</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">05</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Long Tế</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <!-- <li>
+                <a href="" class="see-more" title="">Xem thêm...</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="box-content story-trending">
+            <h3><a href="">Top truyện hay<i class="fa fa-angle-right"></i></a></h3>
+            <ul>
+              <li>
+                <div class="story-numerical-order">01</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Y Võ Song Toàn</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">02</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Nam Chính, Thỉnh Thẳng Lại !!!</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">03</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Ta Với Sư Môn Không Hợp</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">04</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Sự Trả Thù Ngọt Ngào - Thiên Thiên</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <div class="story-numerical-order">05</div>
+                <div class="story-detail">
+                  <a href="" class="story-detail__name">Long Tế</a>
+                  <div class="story-detail__views"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <!-- <li>
+                <a href="" class="see-more" title="">Xem thêm...</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="box-content user-top">
+            <h3><a href="">Top User đóng góp<i class="fa fa-angle-right"></i></a></h3>
+            <ul>
+              <li>
+                <a href="" class="user-image" title=""><img src="./images/meme.jpg"/></a>
+                <div class="user-detail">
+                  <a href="" class="user-detail__username">Nguyễn Văn A</a>
+                  <div class="user-detail__time-view"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="user-image" title=""><img src="./images/meme.jpg"/></a>
+                <div class="user-detail">
+                  <a href="" class="user-detail__username">Trần Văn B</a>
+                  <div class="user-detail__time-view"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="user-image" title=""><img src="./images/meme.jpg"/></a>
+                <div class="user-detail">
+                  <a href="" class="user-detail__username">Phạm Tài C</a>
+                  <div class="user-detail__time-view"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="user-image" title=""><img src="./images/meme.jpg"/></a>
+                <div class="user-detail">
+                  <a href="" class="user-detail__username">Nguyễn Như Ngọc D</a>
+                  <div class="user-detail__time-view"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <li>
+                <a href="" class="user-image" title=""><img src="./images/meme.jpg"/></a>
+                <div class="user-detail">
+                  <a href="" class="user-detail__username">Nguyễn Hữu E</a>
+                  <div class="user-detail__time-view"><i class="fa fa-eye"></i>67,797,796</div>
+                </div>
+              </li>
+              <!-- <li>
+                <a href="" class="see-more" title="">Xem thêm...</a>
+              </li> -->
+            </ul>
+          </div>
+          <div class="list-tag">
+            <a href="" class="tag tag-vip" title="">#Truyện VIP</a>
+            <a href="" class="tag tag-full" title="">#Truyện Full</a>
+            <a href="" class="tag tag-hot" title="">#Truyện Hot</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="copy-right">&copy;copyright 2020</div>
+      <div class="contact-us">Contact Us: <a href="mailto:hotro@mepuzz.com" title="hotro@mepuzz.com">hotro@mepuzz.com</a></div>
+    </div>
+  </footer>
+
+  <div id="overLayModal" class="background-overlay background-overlay-modal"></div>
+
+  <div id="modalLogin" class="modal modal-login">
+    <button id="btnCloseModalLogin" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account">
+      <h3>Đăng nhập</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Mật khẩu">
+        <button type="submit" class="btn-action-login">Đăng nhập</button>
+      </form>
+      <button type="button" class="btn-forgot-password">Quên mật khẩu?</button>
+    </div>
+    <div class="login-with-social-network">
+      <h3>Đăng nhập bằng</h3>
+      <button type="button" class="btn-login-facebook"><i class="fa fa-facebook-square"></i><span>Facebook</span></button>
+      <button type="button" class="btn-login-google"><img src="./images/google.png"><span>Google</span></button>
+    </div>
+    <div class="register">
+      <span>Chưa có tài khoản?</span>
+      <button type="button" class="btn-register">Đăng ký</button>
+    </div>
+  </div>
+
+  <div id="modalRegister" class="modal modal-register">
+    <button id="btnCloseModalRegister" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account border-none">
+      <h3>Đăng ký</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Mật khẩu">
+        <input type="password" name="repeat_password" placeholder="Nhập lại mật khẩu">
+        <button type="submit" class="btn-action-register">Đăng ký</button>
+      </form>      
+      <div class="register mg-top-5">
+        <span>Đã tài khoản?</span>
+        <button type="button" class="btn-login">Đăng nhập</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalForgotPassword" class="modal modal-forgot-password">
+    <button id="btnCloseModalForgotPassword" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account box-content-forgot-password border-none active">
+      <h3>Quên mật khẩu</h3>
+      <form action="">
+        <input type="email" name="email" placeholder="Nhập email của bạn">
+        <button type="button" class="btn-action-get-password">Lấy mật khẩu mới</button>
+      </form>      
+      <div class="register mg-top-5">
+        <span>Đã tài khoản?</span>
+        <button type="button" class="btn-login">Đăng nhập</button>
+      </div>
+    </div>
+    <div class="notification-forgot-password">
+      <div class="title-notif">Thông báo</div>
+      <div>Một mật khẩu mới đã được gửi đến email "<span>abc@gmail.com</span>".</div>
+      <div>Vui lòng kiểm tra email của bạn để lấy mật khẩu.</div>
+    </div>
+  </div>
+
+  <div id="modalChangePassword" class="modal modal-change-password">
+    <button id="btnCloseModalChangePassword" class="btn-close-modal"><i class="fa fa-times"></i></button>
+    <div class="login-with-account box-content-change-password border-none active">
+      <h3>Đổi mật khẩu</h3>
+      <form action="">
+        <input type="password" name="old_password" placeholder="Mật khẩu cũ">
+        <input type="password" name="new_password" placeholder="Mật khẩu mới">
+        <input type="password" name="repeat_new_password" placeholder="Nhập lại mật khẩu mới">
+        <button type="button" class="btn-action-change-password">Đổi mật khẩu</button>
+      </form>      
+    </div>
+    <div class="notification-change-password text-center">Đổi mật khẩu thành công</div>
+  </div>
+
+  <div id="theme-mode"><img src="./images/sun.png" alt="light-mode" title="Chuyển sang chế độ tối"></div>
+  <div id="back-to-top"><i class="fa fa-angle-up"></i></div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
