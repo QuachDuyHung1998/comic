@@ -235,13 +235,57 @@ if (seeMoreDes) {
 
 // comment
 let comment = {
+  htmlComment: function (name, content, seconds, minutes, hours, date, month, year) {
+    return `
+      <div class="list-comment__main">
+        <div class="d-flex">
+          <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+          <div class="detail-comment">
+            <div class="box-content">
+              <div class="box-content__user-name">${name}</div>
+              <div class="box-content__content">${content}</div>
+            </div>
+            <div class="action">
+              <div class="action__show-reply">Trả lời</div>
+              <div class="send-time">${hours}:${minutes}:${seconds} - ${date}/${month}/${year}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="list-comment__reply">
+        <div class="box-replying">
+          <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+          <div class="box-replying__form">
+            <input type="text" placeholder="Viết phản hồi...">
+            <button type="button" class="send-reply">Gửi</button>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  htmlReplyComment: function (content, seconds, minutes, hours, date, month, year) {
+    return `
+      <div class="d-flex">
+        <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
+        <div class="detail-comment">
+          <div class="box-content">
+            <div class="box-content__user-name">User</div>
+            <div class="box-content__content">${content}</div>
+          </div>
+          <div class="action">
+            <div class="action__show-reply">Trả lời</div>
+            <div class="send-time">${hours}:${minutes}:${seconds} - ${date}/${month}/${year}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
   post: function () {
     let btnSendCmt = document.getElementById("btn-send-comment");
     if (btnSendCmt) {
       btnSendCmt.addEventListener("click", function () {
         let name = btnSendCmt.closest(".form-comment").querySelector("#input-name").value;
         let content = btnSendCmt.closest(".form-comment").querySelector("#input-content").value;
-        console.log(name, content);
         if (name == "" || content == "") {
           if (name == "") alert("Bạn chưa nhập tên.");
           if (content == "") alert("Bạn chưa nhập nội dung bình luận.");
@@ -253,125 +297,156 @@ let comment = {
           let date = now.getDate();
           let month = now.getMonth() + 1;
           let year = now.getFullYear();
-          var newElement = document.createElement("div");
+          let newElement = document.createElement("div");
           let setAttr = document.createAttribute("class");
           setAttr.value = "list-comment__item";
           newElement.setAttributeNode(setAttr);
-          newElement.innerHTML = `
-          <div class="list-comment__main">
-            <div class="d-flex">
-              <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
-              <div class="detail-comment">
-                <div class="box-content">
-                  <div class="box-content__user-name">${name}</div>
-                  <div class="box-content__content">${content}</div>
-                </div>
-                <div class="action">
-                  <div class="action__show-reply">Trả lời</div>
-                  <div class="send-time">${hours}:${minutes}:${seconds} - ${date}/${month}/${year}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
+          newElement.innerHTML = comment.htmlComment(name, content, seconds, minutes, hours, date, month, year);
           btnSendCmt.closest(".comment-story").querySelector(".list-comment").appendChild(newElement);
           btnSendCmt.closest(".form-comment").querySelector("#input-name").value = "";
           btnSendCmt.closest(".form-comment").querySelector("#input-content").value = "";
+          comment.showBoxReply();
         }
       });
     }
   },
-  // showBoxReply: function () {
-  //   document.addEventListener("click", ".action__show-reply", function () {
-  //     let replyToName = $(this).closest(".detail-comment").querySelector(".box-content__user-name").html();
-  //     $(".list-comment__reply .box-replying").removeAttr("style");
-  //     $(this).closest(".list-comment__item").find(".list-comment__reply .box-replying").css("display", "flex");
-  //     $(this).closest(".list-comment__item").find(".list-comment__reply .box-replying input").val(`@${replyToName} `);
-  //     $(this).closest(".list-comment__item").find(".list-comment__reply .box-replying input").focus();
-  //     $(this)
-  //       .closest(".list-comment__item")
-  //       .find(".list-comment__reply .box-replying .send-reply")
-  //       .attr("data-name", replyToName);
-  //   });
-  // },
-  // reply: function () {
-  //   $(".send-reply").each(function () {
-  //     $(this).click(function () {
-  //       let now = new Date();
-  //       let hours = now.getHours();
-  //       let minutes = now.getMinutes();
-  //       let seconds = now.getSeconds();
-  //       let date = now.getDate();
-  //       let month = now.getMonth() + 1;
-  //       let year = now.getFullYear();
-  //       let replyTo = $(this).attr("data-name");
-  //       let box = $(this).closest(".box-replying");
-  //       let content = $(this).closest(".box-replying__form").find("input").val();
-  //       $(this).closest(".box-replying__form").find("input").val("");
-  //       content = content.replace(`@${replyTo}`, `<b>${replyTo}</b>`);
-  //       box.removeAttr("style");
-  //       box.before(`
-  //         <div class="list-comment__reply-item">
-  //           <div class="d-flex">
-  //             <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
-  //             <div class="detail-comment">
-  //               <div class="box-content">
-  //                 <div class="box-content__user-name">User</div>
-  //                 <div class="box-content__content">${content}</div>
-  //               </div>
-  //               <div class="action">
-  //                 <div class="action__show-reply">Trả lời</div>
-  //                 <div class="send-time">${hours}:${minutes}:${seconds} - ${date}/${month}/${year}</div>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       `);
-  //     });
-  //   });
-  // },
-  // enterReply: function () {
-  //   $(".box-replying__form input").keyup(function (e) {
-  //     if (e.keyCode === 13) {
-  //       e.preventDefault();
-  //       let now = new Date();
-  //       let hours = now.getHours();
-  //       let minutes = now.getMinutes();
-  //       let seconds = now.getSeconds();
-  //       let date = now.getDate();
-  //       let month = now.getMonth() + 1;
-  //       let year = now.getFullYear();
-  //       let replyTo = $(this).find("~ button").attr("data-name");
-  //       let box = $(this).closest(".box-replying");
-  //       let content = $(this).val();
-  //       $(this).val("");
-  //       content = content.replace(`@${replyTo}`, `<b>${replyTo}</b>`);
-  //       box.removeAttr("style");
-  //       box.before(`
-  //         <div class="list-comment__reply-item">
-  //           <div class="d-flex">
-  //             <div class="avatar"><img src="./images/meme.jpg" alt=""></div>
-  //             <div class="detail-comment">
-  //               <div class="box-content">
-  //                 <div class="box-content__user-name">User</div>
-  //                 <div class="box-content__content">${content}</div>
-  //               </div>
-  //               <div class="action">
-  //                 <div class="action__show-reply">Trả lời</div>
-  //                 <div class="send-time">${hours}:${minutes}:${seconds} - ${date}/${month}/${year}</div>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       `);
-  //     }
-  //   });
-  // },
+  enterPost: function () {
+    let inputName = document.getElementById("input-name");
+    let inputContent = document.getElementById("input-content");
+    let postCmt = (boxInput) => {
+      boxInput.addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+          e.stopPropagation();
+          e.preventDefault();
+          let name = inputName.value;
+          let content = inputContent.value;
+          if (name == "" || content == "") {
+            if (name == "") alert("Bạn chưa nhập tên.");
+            if (content == "") alert("Bạn chưa nhập nội dung bình luận.");
+          } else {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            let seconds = now.getSeconds();
+            let date = now.getDate();
+            let month = now.getMonth() + 1;
+            let year = now.getFullYear();
+            let newElement = document.createElement("div");
+            let setAttr = document.createAttribute("class");
+            setAttr.value = "list-comment__item";
+            newElement.setAttributeNode(setAttr);
+            newElement.innerHTML = comment.htmlComment(name, content, seconds, minutes, hours, date, month, year);
+            boxInput.closest(".comment-story").querySelector(".list-comment").appendChild(newElement);
+            boxInput.closest(".form-comment").querySelector("#input-name").value = "";
+            boxInput.closest(".form-comment").querySelector("#input-content").value = "";
+            comment.showBoxReply();
+            comment.reply();
+            comment.enterReply();
+          }
+        }
+      });
+    };
+    postCmt(inputName);
+    postCmt(inputContent);
+  },
+  showBoxReply: function () {
+    let btnShowReply = document.getElementsByClassName("action__show-reply");
+    if (btnShowReply) {
+      for (let i = 0; i < btnShowReply.length; i++) {
+        btnShowReply[i].addEventListener("click", function () {
+          let boxReplying = document.getElementsByClassName("box-replying");
+          if (boxReplying) {
+            for (let j = 0; j < boxReplying.length; j++) {
+              boxReplying[j].classList.remove("active");
+            }
+          }
+          let replyToName = btnShowReply[i].closest(".detail-comment").querySelector(".box-content__user-name").textContent;
+          btnShowReply[i]
+            .closest(".list-comment__item")
+            .querySelector(".list-comment__reply .box-replying")
+            .classList.add("active");
+          btnShowReply[i]
+            .closest(".list-comment__item")
+            .querySelector(".list-comment__reply .box-replying input").value = `@${replyToName} `;
+          btnShowReply[i].closest(".list-comment__item").querySelector(".list-comment__reply .box-replying input").focus();
+          btnShowReply[i]
+            .closest(".list-comment__item")
+            .querySelector(".list-comment__reply .box-replying .send-reply")
+            .setAttribute("data-name", replyToName);
+        });
+      }
+    }
+  },
+  reply: function () {
+    let btnSendReply = document.getElementsByClassName("send-reply");
+    if (btnSendReply) {
+      for (let i = 0; i < btnSendReply.length; i++) {
+        btnSendReply[i].addEventListener("click", function () {
+          let now = new Date();
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+          let date = now.getDate();
+          let month = now.getMonth() + 1;
+          let year = now.getFullYear();
+          let replyTo = btnSendReply[i].getAttribute("data-name");
+          let box = btnSendReply[i].closest(".box-replying");
+          let content = btnSendReply[i].closest(".box-replying__form").querySelector("input").value;
+          btnSendReply[i].closest(".box-replying__form").querySelector("input").value = "";
+          content = content.replace(`@${replyTo}`, `<b>${replyTo}</b>`);
+          box.classList.remove("active");
+          let newElement = document.createElement("div");
+          let setAttr = document.createAttribute("class");
+          setAttr.value = "list-comment__reply-item";
+          newElement.setAttributeNode(setAttr);
+          newElement.innerHTML = comment.htmlReplyComment(content, seconds, minutes, hours, date, month, year);
+          box.before(newElement);
+          comment.showBoxReply();
+        });
+      }
+    }
+  },
+  enterReply: function () {
+    let boxReplyForm = document.getElementsByClassName("box-replying__form");
+    if (boxReplyForm) {
+      for (let i = 0; i < boxReplyForm.length; i++) {
+        let input = boxReplyForm[i].querySelector("input");
+        if (input) {
+          input.addEventListener("keyup", function (e) {
+            if (e.keyCode === 13) {
+              e.preventDefault();
+              let now = new Date();
+              let hours = now.getHours();
+              let minutes = now.getMinutes();
+              let seconds = now.getSeconds();
+              let date = now.getDate();
+              let month = now.getMonth() + 1;
+              let year = now.getFullYear();
+              let replyTo = boxReplyForm[i].querySelector("button").getAttribute("data-name");
+              let box = boxReplyForm[i].closest(".box-replying");
+              let content = input.value;
+              input.value = "";
+              content = content.replace(`@${replyTo}`, `<b>${replyTo}</b>`);
+              box.classList.remove("active");
+              let newElement = document.createElement("div");
+              let setAttr = document.createAttribute("class");
+              setAttr.value = "list-comment__reply-item";
+              newElement.setAttributeNode(setAttr);
+              newElement.innerHTML = comment.htmlReplyComment(content, seconds, minutes, hours, date, month, year);
+              box.before(newElement);
+              comment.showBoxReply();
+            }
+          });
+        }
+      }
+    }
+  },
 };
 comment.post();
-// comment.showBoxReply();
-// comment.reply();
-// comment.enterReply();
+comment.enterPost();
+comment.showBoxReply();
+comment.reply();
+comment.enterReply();
 
 // load color-text and font-size current
 let styleContentChapter = "";

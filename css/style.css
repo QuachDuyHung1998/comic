@@ -1910,6 +1910,7 @@ a:hover {
 }
 
 .comment-story .list-comment__item .avatar {
+  min-width: 35px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1981,6 +1982,12 @@ a:hover {
   -webkit-box-ordinal-group: 1001;
       -ms-flex-order: 1000;
           order: 1000;
+}
+
+.comment-story .list-comment__item .box-replying.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .comment-story .list-comment__item .box-replying__form {
