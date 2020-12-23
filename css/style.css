@@ -724,6 +724,10 @@ a:hover {
   background-color: #3a3b3c;
 }
 
+.dark-mode .chapter .content-chapter {
+  color: #fff;
+}
+
 .dark-mode .pagination ul li {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -2255,10 +2259,10 @@ footer .contact-us a {
 
 #settings .list-config {
   position: absolute;
-  bottom: -75px;
-  right: -23px;
+  bottom: -30px;
+  right: -80px;
   padding: 15px;
-  width: 150px;
+  width: 180px;
   font-size: 1.4rem;
   color: #050505;
   background-color: #fff;
@@ -2276,45 +2280,68 @@ footer .contact-us a {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+  z-index: 999;
 }
 
 #settings .list-config ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: left;
   line-height: 1.5;
   font-size: 1.3rem;
 }
 
-#settings .list-config ul li div {
+#settings .list-config ul li .title-setting {
+  margin-right: 5px;
   font-family: "NunitoSans-Bold";
 }
 
-#settings .list-config ul li div span {
-  font-family: "NunitoSans";
+#settings .list-config ul li .title-setting .font-large {
+  font-size: 1.8rem;
 }
 
-#settings .list-config ul li #change-text-color,
-#settings .list-config ul li #change-font-size-text {
+#settings .list-config ul li .title-setting img {
+  width: 20px;
+  vertical-align: middle;
+}
+
+#settings .list-config ul li .content-setting {
+  width: 80%;
+}
+
+#settings .list-config ul li .content-setting span {
+  display: block;
+  text-align: right;
+}
+
+#settings .list-config ul li .content-setting #change-text-color,
+#settings .list-config ul li .content-setting #change-font-size-text {
   width: 100%;
-  height: 10px;
+  height: 12px;
   -webkit-appearance: none;
   background-color: #111;
   outline: none;
-  border-radius: 20px;
   overflow: hidden;
   -webkit-box-shadow: inset 0 0 5px black;
           box-shadow: inset 0 0 5px black;
 }
 
-#settings .list-config ul li #change-text-color::-webkit-slider-thumb,
-#settings .list-config ul li #change-font-size-text::-webkit-slider-thumb {
+#settings .list-config ul li .content-setting #change-text-color::-webkit-slider-thumb,
+#settings .list-config ul li .content-setting #change-font-size-text::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #00fd0a;
-  border: 8px solid #09e410;
-  -webkit-box-shadow: -407px 0 0 400px #00fd0a;
-          box-shadow: -407px 0 0 400px #00fd0a;
+  width: 12px;
+  height: 12px;
+  background-color: #a8a8a8;
+  border: 8px solid #727272;
+  -webkit-box-shadow: -407px 0 0 400px #a8a8a8;
+          box-shadow: -407px 0 0 400px #a8a8a8;
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

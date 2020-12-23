@@ -421,11 +421,11 @@ if (setting) {
   // range color text
   let colorLightMode = `rgba(5, 5, 5, `; //rgba(5, 5, 5, 1)
   let backgroundLightMode = `rgba(240, 242, 245, `; //rgba(240, 242, 245, 1)
-  let colorDarkMode = `rgba(193, 193, 193, `; //rgba(193, 193, 193, 1)
+  let colorDarkMode = `rgba(250, 250, 250, `; //rgba(193, 193, 193, 1)
   let backgroundDarkMode = `rgba(24, 25, 26, `; //rgba(24, 25, 26, 1)
   let rangeTextColor = document.getElementById("change-text-color");
-  let valueTextColor = document.getElementById("value-text-color");
-  if (rangeTextColor && valueTextColor) {
+  // let valueTextColor = document.getElementById("value-text-color");
+  if (rangeTextColor) {
     rangeTextColor.addEventListener("change", function () {
       let color = "";
       let themeCurrent = document.body.getAttribute("class");
@@ -435,7 +435,7 @@ if (setting) {
         } else if (themeCurrent == "dark-mode") {
           color = `${colorDarkMode}${rangeTextColor.value / 10})`;
         }
-        valueTextColor.innerHTML = `${rangeTextColor.value}0%`;
+        // valueTextColor.innerHTML = `${rangeTextColor.value}0%`;
         if (document.getElementsByClassName("content-chapter")[0]) {
           localStorage.setItem("text-color", color);
           let styleCurrent = "";
@@ -446,10 +446,10 @@ if (setting) {
     });
   }
   let rangeFontSizeText = document.getElementById("change-font-size-text");
-  let valueFontSizeText = document.getElementById("value-font-size-text");
-  if (rangeFontSizeText && valueFontSizeText) {
+  // let valueFontSizeText = document.getElementById("value-font-size-text");
+  if (rangeFontSizeText) {
     rangeFontSizeText.addEventListener("change", function () {
-      valueFontSizeText.innerHTML = `${rangeFontSizeText.value}px`;
+      // valueFontSizeText.innerHTML = `${rangeFontSizeText.value}px`;
       if (document.getElementsByClassName("content-chapter")[0]) {
         localStorage.setItem("font-size", rangeFontSizeText.value);
         let styleCurrent = "";

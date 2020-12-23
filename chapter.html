@@ -752,20 +752,26 @@
 
   <div id="theme-mode"><img src="./images/sun.png" alt="light-mode" title="Chuyển sang chế độ tối"></div>
   <div id="settings">
-    <button id="btn-show-setting" class="fa fa-cogs"></button>
+    <button id="btn-show-setting" class="fa fa-gear"></button>
     <div class="list-config">
       <ul>
         <li class="mg-bot-15">
-          <div>Độ sáng chữ: <span id="value-text-color">100%</span></div>
-          <input id="change-text-color" type="range" min="3" max="10" value="10">
+          <div class="title-setting"><img src="./images/brightness.png" alt=""></div>
+          <div class="content-setting">
+            <!-- <span id="value-text-color">100%</span> -->
+            <input id="change-text-color" type="range" min="3" max="10" value="10">
+          </div>
         </li>
         <li>
-          <div>Cỡ chữ: <span id="value-font-size-text">20px</span></div>
-          <input id="change-font-size-text" type="range" min="10" max="35" value="20"></li>
+          <div class="title-setting"><span class="font-large">A</span>A</div>
+          <div class="content-setting">
+            <!-- <span id="value-font-size-text">20px</span> -->
+            <input id="change-font-size-text" type="range" min="10" max="35" value="20"></li>
+          </div>
       </ul>
     </div>
   </div>
-  <div id="back-to-top"><i class="fa fa-angle-up"></i></div>
+  <!-- <div id="back-to-top"><i class="fa fa-angle-up"></i></div> -->
 
   <script src="./js/script.js"></script>
 </body>
