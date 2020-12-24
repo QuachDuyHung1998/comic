@@ -25,6 +25,7 @@ if (btnThemeMode) {
     }
     document.body.classList.toggle("dark-mode");
     document.body.classList.toggle("light-mode");
+    loadSetting();
   });
 }
 
@@ -474,32 +475,47 @@ comment.enterReply();
 comment.cancelComment();
 
 // load color-text and font-size current
-let styleContentChapter = "";
-let textColorCurrent = localStorage.getItem("text-color");
-let fontSizeCurrent = localStorage.getItem("font-size");
-if (textColorCurrent !== null) {
-  styleContentChapter += `color: ${textColorCurrent};`;
-  let percentColor = textColorCurrent.slice(-2, -1);
-  if (document.getElementById("value-text-color")) {
-    if (parseInt(percentColor) === 1) percentColor = 10;
-    document.getElementById("value-text-color").innerHTML = `${percentColor}0%`;
-  }
-  if (document.getElementById("change-text-color")) {
-    document.getElementById("change-text-color").value = percentColor;
+var styleContentChapter = "";
+var textColorCurrent = "";
+var fontSizeCurrent = "";
+function loadSetting() {
+  let themeCurrent = localStorage.getItem("theme");
+  if (!styleContentChapter) var styleContentChapter = "";
+  if (!styleContentChapter) var textColorCurrent = "";
+  if (!styleContentChapter) var fontSizeCurrent = "";
+  if (themeCurrent) {
+    if (themeCurrent === "light") {
+      textColorCurrent = localStorage.getItem("text-color-light");
+    } else if (themeCurrent === "dark") {
+      textColorCurrent = localStorage.getItem("text-color-dark");
+    }
+    fontSizeCurrent = localStorage.getItem("font-size");
+    if (textColorCurrent !== null) {
+      styleContentChapter += `color: ${textColorCurrent};`;
+      let percentColor = textColorCurrent.slice(-2, -1);
+      if (document.getElementById("value-text-color")) {
+        if (parseInt(percentColor) === 1) percentColor = 10;
+        document.getElementById("value-text-color").innerHTML = `${percentColor}0%`;
+      }
+      if (document.getElementById("change-text-color")) {
+        document.getElementById("change-text-color").value = percentColor;
+      }
+    }
+    if (fontSizeCurrent !== null) {
+      styleContentChapter += `font-size: ${fontSizeCurrent}px;`;
+      if (document.getElementById("value-font-size-text")) {
+        document.getElementById("value-font-size-text").innerHTML = `${fontSizeCurrent}px`;
+      }
+      if (document.getElementById("change-font-size-text")) {
+        document.getElementById("change-font-size-text").value = fontSizeCurrent;
+      }
+    }
+    if (document.getElementsByClassName("content-chapter")[0]) {
+      document.getElementsByClassName("content-chapter")[0].setAttribute("style", styleContentChapter);
+    }
   }
 }
-if (fontSizeCurrent !== null) {
-  styleContentChapter += `font-size: ${fontSizeCurrent}px;`;
-  if (document.getElementById("value-font-size-text")) {
-    document.getElementById("value-font-size-text").innerHTML = `${fontSizeCurrent}px`;
-  }
-  if (document.getElementById("change-font-size-text")) {
-    document.getElementById("change-font-size-text").value = fontSizeCurrent;
-  }
-}
-if (document.getElementsByClassName("content-chapter")[0]) {
-  document.getElementsByClassName("content-chapter")[0].setAttribute("style", styleContentChapter);
-}
+loadSetting();
 
 // setting
 let setting = document.getElementById("settings");
@@ -532,12 +548,13 @@ if (setting) {
       if (themeCurrent) {
         if (themeCurrent == "light-mode") {
           color = `${colorLightMode}${rangeTextColor.value / 10})`;
+          localStorage.setItem("text-color-light", color);
         } else if (themeCurrent == "dark-mode") {
           color = `${colorDarkMode}${rangeTextColor.value / 10})`;
+          localStorage.setItem("text-color-dark", color);
         }
         // valueTextColor.innerHTML = `${rangeTextColor.value}0%`;
         if (document.getElementsByClassName("content-chapter")[0]) {
-          localStorage.setItem("text-color", color);
           let styleCurrent = "";
           if (fontSizeCurrent !== null) styleCurrent += `font-size: ${fontSizeCurrent}px;`;
           document.getElementsByClassName("content-chapter")[0].setAttribute("style", `${styleCurrent}color: ${color};`);
