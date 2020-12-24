@@ -258,6 +258,7 @@ let comment = {
           <div class="box-replying__form">
             <input type="text" placeholder="Viết phản hồi...">
             <button type="button" class="send-reply">Gửi</button>
+            <button type="button" class="btn-cancel">Hủy</button>
           </div>
         </div>
       </div>
@@ -306,6 +307,7 @@ let comment = {
           btnSendCmt.closest(".form-comment").querySelector("#input-name").value = "";
           btnSendCmt.closest(".form-comment").querySelector("#input-content").value = "";
           comment.showBoxReply();
+          comment.cancelComment();
         }
       });
     }
@@ -340,14 +342,15 @@ let comment = {
             boxInput.closest(".form-comment").querySelector("#input-name").value = "";
             boxInput.closest(".form-comment").querySelector("#input-content").value = "";
             comment.showBoxReply();
+            comment.cancelComment();
             comment.reply();
             comment.enterReply();
           }
         }
       });
     };
-    postCmt(inputName);
-    postCmt(inputContent);
+    if (inputName) postCmt(inputName);
+    if (inputContent) postCmt(inputContent);
   },
   showBoxReply: function () {
     let btnShowReply = document.getElementsByClassName("action__show-reply");
@@ -441,12 +444,34 @@ let comment = {
       }
     }
   },
+  cancelComment: function () {
+    let btnCancel = document.getElementsByClassName("btn-cancel");
+    if (btnCancel) {
+      for (let i = 0; i < btnCancel.length; i++) {
+        btnCancel[i].addEventListener("click", function () {
+          let boxReplying = document.getElementsByClassName("box-replying");
+          if (boxReplying) {
+            for (let j = 0; j < boxReplying.length; j++) {
+              boxReplying[j].classList.remove("active");
+            }
+          }
+          let itemCmt = document.getElementsByClassName("list-comment__item");
+          if (itemCmt) {
+            for (let j = 0; j < itemCmt.length; j++) {
+              itemCmt[j].querySelector(".list-comment__reply .box-replying input").value = "";
+            }
+          }
+        });
+      }
+    }
+  },
 };
 comment.post();
 comment.enterPost();
 comment.showBoxReply();
 comment.reply();
 comment.enterReply();
+comment.cancelComment();
 
 // load color-text and font-size current
 let styleContentChapter = "";

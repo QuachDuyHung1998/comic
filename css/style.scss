@@ -1369,14 +1369,20 @@ a:hover {
             font-size: 1.2rem;
             border-radius: 5px;
           }
-          .send-reply {
+          .send-reply,
+          .btn-cancel {
             padding: 8px 15px;
             color: $color_btn;
             background-color: $background_btn;
             border-radius: 5px;
             outline: none;
             cursor: pointer;
-            transition: all 0.1s ease-in-out;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .btn-cancel {
+            background-color: #3f3d3d;
           }
         }
       }
@@ -1585,7 +1591,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 9999;
   }
   .list-config {
     position: absolute;
